@@ -19,25 +19,22 @@ o	What is the average price of a home for each year that has three bedrooms, thr
 
  ![image-3](https://github.com/AnnLy2023/Home_Sales/assets/129100456/5ff1ae4a-0e5f-4e0d-900b-b0b3b34998e8)
 
-o	What is the "view" rating for homes costing more than or equal to $350,000? Determine the run time for this query, and round off your answer to two decimal places.
- 
-![image-5](https://github.com/AnnLy2023/Home_Sales/assets/129100456/7e23da0f-7f28-44f5-990d-1557cebe8b13)
+o	What is the "view" rating for homes costing more than or equal to $350,000? Determine the run time for this query, and round off your answer to two decimal places. Compare it to cache and parquet data runtime. 
 
-o   Using the cached data, run the query that filters out the view ratings with an average price of greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
-
--Comparing to the uncached runtime, the cached is a bit faster at .83 seconds vs. uncached at .89 seconds. 
-
-Uncached             vs                               Cached  
- 	 
-![image-6](https://github.com/AnnLy2023/Home_Sales/assets/129100456/16092993-aeb4-485d-a102-96dc025565cd)
-![image-8](https://github.com/AnnLy2023/Home_Sales/assets/129100456/6f092cb1-e667-4d24-aedf-88b06503bf59)
+    - The parquet data runtime is only .21 seconds, comparing to cached data at .27 seconds and uncached data at .34 seconds. 
 
 
+Uncache Data Runtime 
 
-o   Run the query that filters out the view ratings with an average price of greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
+![avgviewavgpricemorethan35000uncache](https://github.com/AnnLy2023/Home_Sales/assets/129100456/ab934afa-2c2a-4e14-9ddb-7175a9ec29be)
 
-Uncached vs parquet DF 
-Uncached DF run time is .89 while Parquet home sales DF only took .57 to run the same query. 
-    
-![image-9](https://github.com/AnnLy2023/Home_Sales/assets/129100456/2a0066aa-d41c-4be1-95fc-3074c32edad9)
-![image-10](https://github.com/AnnLy2023/Home_Sales/assets/129100456/66d7033b-51b1-434d-8dd0-e8185402641f)
+
+Cache Data Runtime 
+
+
+![withcacheddata](https://github.com/AnnLy2023/Home_Sales/assets/129100456/34e212dd-e79a-413d-999c-d3cb6cc06eac)
+
+
+Parquet Data
+
+![parquetdata](https://github.com/AnnLy2023/Home_Sales/assets/129100456/0a645518-d1eb-4cd3-84b2-f0801ee267ec)
